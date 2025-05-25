@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos no Tômbua - Pérola do Namibe</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para a página de eventos */
+        .events-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/Galeria\ de\ Turismo/Eventos.jpg') center/cover no-repeat;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        
+        .events-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .events-hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: #2c5282;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #4299e1;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .event-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .event-card:hover .event-image img {
+            transform: scale(1.1);
+        }
+        
+        .event-content {
+            padding: 25px;
+        }
+        
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .event-title {
+            font-size: 1.4rem;
+            color: #2c5282;
+            margin: 0;
+        }
+        
+        .event-category {
+            background: #ebf8ff;
+            color: #4299e1;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: #718096;
+        }
+        
+        .event-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .event-meta-item i {
+            color: #4299e1;
+        }
+        
+        .event-description {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .event-features {
+            margin-bottom: 25px;
+        }
+        
+        .event-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: #4a5568;
+        }
+        
+        .event-feature i {
+            color: #4299e1;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .event-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #4299e1;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .event-btn:hover {
+            background: #3182ce;
+        }
+        
+        .newsletter-section {
+            background: #f7fafc;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+       
+        .footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 20px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+        }
+        
+        .footer-logo span {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .footer-info p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e0;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            color: white;
+            background: #4a5568;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background: #4299e1;
+        }
+        
+        .footer-copyright {
+            border-top: 1px solid #4a5568;
+            padding-top: 20px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sobre-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .destaque-img {
+                height: 300px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/Galeria de Turismo/Calunamba.png" alt="Logotipo Oficial de Tômbua" width="120">
+                <span class="logo-text">Tômbua o Destino</span>
+            </div>
+
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre Nós</a></li>
+                    <li><a href="atracoes.html"><i class="fas fa-map-marked-alt"></i> Atrações</a></li>
+                    <li><a href="atracoes.html"><i class="fas fa-map-marked-alt"></i> Galeria</a></li>
+                    <li><a href="eventos.html" class="active"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                    <li><a href="planeje.html"><i class="fas fa-route"></i> Planeje Sua Visita</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="events-hero">
+        <div>
+            <h1>Eventos do Tômbua</h1>
+            <p>Descubra as festividades e celebrações que tornam nossa região única</p>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main class="events-container">
+        <div class="section-header">
+            <h2>Próximos Eventos</h2>
+            <p>Confira nossa agenda cultural e participe das celebrações da Pérola do Namibe</p>
+        </div>
+        
+        <div class="events-grid">
+            <!-- Evento 1 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="assets/Galeria de Turismo/Feira-do-empre.jpg" alt="Feira do Empreendedor">
+                </div>
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="event-title">Feira do Empreendedor</h3>
+                        <span class="event-category">Economia</span>
+                    </div>
+                    
+                    <div class="event-meta">
+                        <div class="event-meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>01-10 Dezembro 2025</span>
+                        </div>
+                        <div class="event-meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tombwa</span>
+                        </div>
+                    </div>
+                    
+                    <p class="event-description">
+                        O município recebe empreendedores de todo o lado do país para expor seus diversos produtos produtos, e participar desta grande actividade.
+                    </p>
+                    
+                    <div class="event-features">
+                        <div class="event-feature">
+                            <i class="fas fa-utensils"></i>
+                            <span>Roupas, Culinária</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-wine-glass-alt"></i>
+                            <span>Música</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-music"></i>
+                            <span>Shows culturais</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Feira de artesanato</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evento 2 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="assets/Galeria de Turismo/torneio de pesca.jpg" alt="Torneio de Pesca">
+                </div>
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="event-title">Torneio de Pesca Esportiva</h3>
+                        <span class="event-category">Esportivo</span>
+                    </div>
+                    
+                    <div class="event-meta">
+                        <div class="event-meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>5-7 Julho 2025</span>
+                        </div>
+                        <div class="event-meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Baía dos Tigres</span>
+                        </div>
+                    </div>
+                    
+                    <p class="event-description">
+                        Competição de pesca esportiva nas águas ricas de Tômbua, com categorias para amadores e profissionais.
+                    </p>
+                    
+                    <div class="event-features">
+                        <div class="event-feature">
+                            <i class="fas fa-trophy"></i>
+                            <span>Premiações em dinheiro</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-ribbon"></i>
+                            <span>Diversas categorias</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-people-carry"></i>
+                            <span>Workshops de pesca sustentável</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-campground"></i>
+                            <span>Área de camping gratuita</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evento 3 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="" alt="Festival Cultural">
+                </div>
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="event-title">Festival Cultural do Tômbua</h3>
+                        <span class="event-category">Cultural</span>
+                    </div>
+                    
+                    <div class="event-meta">
+                        <div class="event-meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>20-22 Agosto 2025</span>
+                        </div>
+                        <div class="event-meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Praça Central</span>
+                        </div>
+                    </div>
+                    
+                    <p class="event-description">
+                        Celebração da diversidade cultural da região, com música, dança, arte e gastronomia tradicional.
+                    </p>
+                    
+                    <div class="event-features">
+                        <div class="event-feature">
+                            <i class="fas fa-theater-masks"></i>
+                            <span>Danças tradicionais</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-guitar"></i>
+                            <span>Shows musicais</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Exposições de arte</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-egg"></i>
+                            <span>Culinária tradicional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-header">
+            <h2>Eventos Anuais</h2>
+            <p>Tradições que fazem parte da cultura de Tômbua</p>
+        </div>
+        
+        <div class="events-grid">
+            <!-- Evento 4 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="assets/Galeria de Turismo/Carnaval Tombwa.jpg" alt="Carnaval de Tômbua">
+                </div>
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="event-title">Carnaval de Tômbua</h3>
+                        <span class="event-category">Festa Popular</span>
+                    </div>
+                    
+                    <div class="event-meta">
+                        <div class="event-meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Fevereiro/Março (Anual)</span>
+                        </div>
+                        <div class="event-meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Avenida Marginal</span>
+                        </div>
+                    </div>
+                    
+                    <p class="event-description">
+                        O carnaval mais animado do sul de Angola, com desfiles de grupos carnavalescos, música ao vivo e muita diversão.
+                    </p>
+                    
+                    <div class="event-features">
+                        <div class="event-feature">
+                            <i class="fas fa-mask"></i>
+                            <span>Desfiles temáticos</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-music"></i>
+                            <span>Trios elétricos</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Concurso de fantasias</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-utensils"></i>
+                            <span>Barracas de comida</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evento 5 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="assets/Galeria de Turismo/Festas do namibe.jpg" alt="Festa do Namibe">
+                </div>
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="event-title">Festa do Namibe</h3>
+                        <span class="event-category">Cultural</span>
+                    </div>
+                    
+                    <div class="event-meta">
+                        <div class="event-meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>4 de Abril (Anual)</span>
+                        </div>
+                        <div class="event-meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Toda a província</span>
+                        </div>
+                    </div>
+                    
+                    <p class="event-description">
+                        Celebração do aniversário da província do Namibe, com eventos em toda a região, incluindo Tômbua.
+                    </p>
+                    
+                    <div class="event-features">
+                        <div class="event-feature">
+                            <i class="fas fa-landmark"></i>
+                            <span>Atividades culturais</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-monument"></i>
+                            <span>Exposições históricas</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-fish"></i>
+                            <span>Feira de pesca</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-fireworks"></i>
+                            <span>Show pirotécnico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evento 6 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="assets/Galeria de Turismo/Festa tombwa.jpg" alt="Festa da Cidade do Tombwa">
+                </div>
+                <div class="event-content">
+                    <div class="event-header">
+                        <h3 class="event-title">Festa da Cidade do Tombwa</h3>
+                        <span class="event-category">Cultural</span>
+                    </div>
+                    
+                    <div class="event-meta">
+                        <div class="event-meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>Dezembro (Anual)</span>
+                        </div>
+                        <div class="event-meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Porto de Tômbua</span>
+                        </div>
+                    </div>
+                    
+                    <p class="event-description">
+                        Comemoração local, com regatas, competições e celebrações da cultura, desporto e feira do empreendedor.
+                    </p>
+                    
+                    <div class="event-features">
+                        <div class="event-feature">
+                            <i class="fas fa-ship"></i>
+                            <span>Regatas tradicionais</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-fish"></i>
+                            <span>Competições esportivas</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-utensils"></i>
+                            <span>show pirotécnico</span>
+                        </div>
+                        <div class="event-feature">
+                            <i class="fas fa-award"></i>
+                            <span>Premiações</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="assets/Galeria de Turismo/Calunamba.png" alt="Logotipo Tômbua" width="50">
+                        <span>Tombwa o Destino</span>
+                    </div>
+                    <p>Promovendo o turismo sustentável e a cultura local.</p>
+                </div>
+           
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2025 Tombwa - O Destino. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Menu mobile toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        menuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('active');
+        });
+    </script>
+</body>
+</htm>

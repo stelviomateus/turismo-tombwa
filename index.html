@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra o Tômbua, a pérola do Namibe: praias paradisíacas, cultura pesqueira vibrante. Planeje sua viagem ao destino turístico mais autêntico de Angola.">
+    <meta name="keywords" content="Tômbua, Tombwa, Namibe, Angola, turismo, Porto Alexandre, praias, pesca, cultura">
+    <title>Tombwa - Pérola do Namibe | Turismo em Angola</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #93c5fd 100%);
+        }
+
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Header */
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 800;
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            display: inline-flexbox;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 70px;
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #2c5282;
+            font-size: 1.2rem;
+        }
+        
+        /* Banner principal */
+        .main-banner {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 30px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        /* Seções comuns */
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            color: #2c5282;
+            margin-bottom: 10px;
+        }
+        
+        /* Cards de destaques */
+        .highlight-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover .card-image img {
+            transform: scale(1.1);
+        }
+        
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #4299e1;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            color: #2c5282;
+        }
+        
+        .location {
+            color: #718096;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .description {
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+        
+        .rating {
+            color: #f6ad55;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .rating span {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        /* Botões */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #4299e1;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3182ce;
+        }
+        
+        .btn-outline {
+            border: 2px solid #4299e1;
+            color: #4299e1;
+        }
+        
+        .btn-outline:hover {
+            background-color: #4299e1;
+            color: white;
+        }
+        
+        .text-center {
+            text-align: center;
+            margin-top: 30px;
+        }
+       /* Vídeo conteiner */
+       .video-container{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+       }
+
+        /* Contêiner para o vídeo e a legenda */
+.video-container {
+  display: flex; /* Usa flexbox para alinhar os elementos lado a lado */
+  align-items: center; /* Alinha verticalmente ao centro */
+  gap: 20px; /* Espaço entre o vídeo e a legenda */
+  padding: 20px; /* Espaçamento interno */
+  max-width: 1000px; /* Limita a largura do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+/* Estilo do vídeo */
+#video-ilustrativo {
+  max-width: 640px; /* Limita a largura do vídeo */
+  width: 100%; /* Garante que o vídeo seja responsivo */
+  height: auto; /* Mantém a proporção */
+  border: 2px solid #333; /* Borda opcional */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Efeito hover no vídeo */
+#video-ilustrativo:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+/* Estilo da tabela da legenda */
+.video-caption-table {
+  flex: 1; /* Faz a tabela ocupar o espaço restante */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  border-collapse: collapse; /* Remove espaços entre bordas */
+}
+
+/* Estilo da célula da tabela */
+.video-caption-table td {
+  padding: 10px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda leve */
+}
+
+/* Estilo para cada letra da legenda */
+.letter {
+  display: inline-block; /* Permite transformações individuais */
+  transition: transform 0.2s ease; /* Transição suave para a animação */
+        }
+        
+        /* Galeria */
+        .gallery {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 15px;
+            color: white;
+        }
+        
+        /* Depoimentos */
+        .testimonials {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        
+        .testimonial-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .quote-icon {
+            color: #4299e1;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .rating {
+            color: #f6ad55;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: #ebf8ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #4299e1;
+            font-size: 20px;
+        }
+        
+        .author-info h4 {
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: #fff;
+        }
+        
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter .subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .newsletter-form .form-group {
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .newsletter-form .btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 10px 25px;
+        }
+        
+        .form-check {
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-check input {
+            margin-right: 10px;
+        }
+        
+        .form-check label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Rodapé */
+        .footer {
+            background-color: #2d3748;
+            color: #fff;
+            padding: 10px 0 0px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #4299e1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .footer-address {
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .footer-description {
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #4299e1;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e0;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+        }
+        
+        .footer-links i {
+            margin-right: 8px;
+            font-size: 12px;
+        }
+        
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: #4299e1;
+        }
+        
+        .social-title {
+            font-size: 16px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            width: 35px;
+            height: 35px;
+            background-color: #4a5568;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: #4299e1;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #4a5568;
+            padding-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .copyright {
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        .footer-policies {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-policies a {
+            color: #cbd5e0;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-policies a:hover {
+            color: #fff;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                min-width: 100%;
+            }
+
+            .video-container {
+            flex-direction: column; /* Empilha vídeo e legenda em telas menores */
+            align-items: stretch; /* Alinha ao centro */
+            }
+
+            #video-ilustrativo {
+            max-width: 90%; /* Ajusta o tamanho do vídeo */
+            margin: 0 auto; /* Centraliza */
+            }
+
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/Galeria de Turismo/Calunamba.png" alt="Logotipo Oficial de Tômbua">
+                <span class="logo-text">Tombwa o Destino</span>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre Nós</a></li>
+                    <li><a href="atracoes.html"><i class="fas fa-map-marked-alt"></i> Atrações</a></li>
+                    <li><a href="galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                    <li><a href="planeje.html"><i class="fas fa-route"></i> Planeje Sua Visita</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   <!-- Hero Banner com Imagem de Fundo -->
+<section class="hero" style="background: url('assets/Galeria\ de\ Turismo/Foto inicial.jpg') center/cover no-repeat;">
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1>Descubra a Magia do Tombwa</h1>
+            <p class="subtitle">Onde o deserto encontra o mar em Angola</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Destaques -->
+    <section class="highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2>Destaques do Tombwa</h2>
+                <p>Os lugares mais incríveis que você não pode perder</p>
+            </div>
+
+            <div class="highlight-cards">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/Galeria de Turismo/paisagem-tombua.jpg" alt="Lagoa Arco">
+                        <span class="badge">Popular</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lagoa Arco</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Curoca</p>
+                        <p class="description">A Lagoa do Arco, constitui uma das emblemáticas obras singular da natureza
+                            angolana, esculpida precisamente na margem direita do Rio Curoca. O lugar
+                            compreende três (3) lagoas, sendo a intermédia, a mais famosa, pela existência dos
+                            arcos esculpidos naturalmente nos arenitos que afloram o espaço e deram o nome ao
+                            local paradisíaco.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (128 avaliações)</span>
+                        </div>
+                        <a href="galeria.html" class="btn btn-outline">Mais Fotos</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/Galeria de Turismo/Rotunda.jpg" alt="Tombwa">
+                        <span class="badge">Cultural</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Rotunda</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Centro do Tombwa</p>
+                        <p class="description">Localizada no coração do município, a Rotunda do Tombwa é muito mais que um ponto de passagem,
+                            é um verdadeiro símbolo da cidade. Com a sua arquitetura única e localização estratégica, a rotunda acolhe quem chega e quem parte,
+                            como um cartão-postal que celebra a cultura e a identidade do povo tombwese.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (96 avaliações)</span>
+                        </div>
+                        <a href="galeria.html" class="btn btn-outline">Mais Fotos</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/Galeria de Turismo/Colinas 1.jpg" alt="Colinas">
+                        <span class="badge">Relaxamento</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Colinas</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i>Curoca</p>
+                        <p class="description">O atractivo constitui neste sentido, uma morfoescultura singular pela sua configuração
+                            paisagistica que impressiona qualquer turista de natureza ou investigador de ciências da
+                            terra, entre outros. As colinas se apresentam como um postal que parece esculpido por
+                            um grande artista da natureza, simplesmente impressionante; uma maravilha escondida
+                            no deserto que você precisa conhecer</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (215 avaliações)</span>
+                        </div>
+                        <a href="galeria.html" class="btn btn-outline">Mais Fotos</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="atracoes.html" class="btn btn-primary">Ver todas as atrações <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeo Promocional -->
+    <div class="video-container">
+        <video width="640" height="360" controls id="video-ilustrativo">
+          <source src="assets/video Turismo/Destino.mp4" type="video/mp4">
+        </video>
+        <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Tombwa em Movimento</h2>
+            <p class="text-gray-600 mb-4">Assista ao nosso vídeo exclusivo e deixe-se encantar pelas belezas naturais e culturais desta joia do Namibe.</p>
+            <p class="text-gray-600 mb-6">Explore as deslumbrantes paisagens do Tombwa, onde o deserto encontra o oceano Atlântico. Navegue pelo lindo oceano , admire as
+                 dunas douradas e descubra o vibrante porto de Porto Alexandre, um tesouro angolano repleto de história e beleza natural. Visite Tombwa conheça o destino.</p>
+        </div>
+      </div>
+   
+    <!-- Galeria de imagens -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galeria do Tombwa</h2>
+                <p>Explore as belezas de Tomba através das nossas imagens</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/Galeria de Turismo/deserto-mar.jpg" alt="Praia do Tômbua">
+                    <div class="gallery-overlay">
+                        <h3>Praias</h3>
+
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/Galeria de Turismo/Tombwa-cidade.jpg" alt="Porto de Tômbua">
+                    <div class="gallery-overlay">
+                        <h3>Tombwa</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/Galeria de Turismo/Praia-do-brasil.jpg" alt="Paisagem de Tômbua">
+                    <div class="gallery-overlay">
+                        <h3>Deserto e Mar</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/Gif Turismo/Cultura.gif" alt="Cultura local">
+                    <div class="gallery-overlay">
+                        <h3>Cultura e Arte</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/Galeria de Turismo/Gatronomia.gif" alt="Gastronomia">
+                    <div class="gallery-overlay">
+                        <h3>Gastronomia</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/Galeria de Turismo/a beleza do sol.jpg" alt="Pôr do sol">
+                    <div class="gallery-overlay">
+                        <h3>Pôr do Sol</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="galeria.html" class="btn btn-primary">Ver galeria completa <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que dizem nossos visitantes</h2>
+                <p>Experiências reais de quem já explorou Tombwa</p>
+            </div>
+
+            <div class="testimonial-cards">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">Tombwa superou todas as minhas expectativas! As colinas é simplesmente surreal e a hospitalidade do povo é incomparável.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Maria Silva</h4>
+                            <p>Lisboa, Portugal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">Como amante de fotografia, encontrei em Tômbua cenários incríveis. As cores do Porto Alexandre ao pôr do sol são inesquecíveis!</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Carlos Mendes</h4>
+                            <p>Luanda, Angola</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">A gastronomia local, especialmente os frutos do mar, é divina! O Bar Virei tem uma atmosfera única que recomendo a todos.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ana Oliveira</h4>
+                            <p>São Paulo, Brasil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Receba nossas ofertas e novidades</h2>
+                <p class="subtitle">Inscreva-se para receber guias de viagem, promoções exclusivas e as melhores dicas para explorar Tômbua.</p>
+
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit" class="btn btn-primary">Assinar <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="assets/Galeria de Turismo/Calunamba.png" alt="Logotipo Tômbua" width="50">
+                        </div>
+                        <span class="logo-text">Tombwa o Destino <span>
+                    </div>
+                    <p class="footer-address">Tombwa - Pérola do Namibe, Angola</p>
+                    <p class="footer-description">Promovendo o turismo sustentável e a cultura local 2025.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="atracoes.html"><i class="fas fa-chevron-right"></i> Atrações</a></li>
+                        <li><a href="eventos.html"><i class="fas fa-chevron-right"></i> Eventos</a></li>
+                        <li><a href="galeria.html"><i class="fas fa-chevron-right"></i> Galeria</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Informações</h3>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html"><i class="fas fa-chevron-right"></i> Sobre Nós</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Simione Mukune, Tombwa, Namibe</li>
+                        <li><i class="fas fa-phone"></i> +244 976 275 905</li>
+                        <li><i class="fas fa-envelope"></i> info@tombwa-turismo.ao</li>
+                    </ul>
+
+                    <div class="social-links">
+                        <h4 class="social-title">Siga-nos</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Tombwa o Destino. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" class="btn btn-primary">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    
+    <script>
+        // Menu mobile toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        menuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('active');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Suavizar rolagem para links âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mudança de idioma
+        document.getElementById('language').addEventListener('change', function() {
+            // Aqui você pode adicionar a lógica para mudar o idioma
+            alert('Funcionalidade de mudança de idioma será implementada em breve!');
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+        const caption = document.getElementById('caption');
+        const text = caption.textContent;
+        caption.textContent = ''; // Limpa o texto original
+
+        // Divide o texto em letras e envolve cada uma em um span
+        text.split('').forEach(char => {
+        const span = document.createElement('span');
+        span.className = 'letter';
+        span.textContent = char;
+        caption.appendChild(span);
+  });
+});
+    </script>
+</body>
+</html>

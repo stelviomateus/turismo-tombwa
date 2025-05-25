@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrações Turísticas do Tombwa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        .hero-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://scontent.flad4-1.fna.fbcdn.net/v/t1.6435-9/120940025_2895202527358691_155941942642757207_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEGYnOdr0Tlj6QEKaHpH99goYZxbZDd5-qhhnFtkN3n6tifRO2T2fo2bOREgNBej5knynJiVOzr5_LrtWDrdLTX&_nc_ohc=qlvDMZd_qMQQ7kNvwFpjia4&_nc_oc=AdnRPHhaCLRd0m_YO0QOJqDvSvCUSMXebHvXVLEHuu5D5qWhHVcl2n4VHLFtZf6Qm1M&_nc_zt=23&_nc_ht=scontent.flad4-1.fna&_nc_gid=MRxdb1GRmcnkZtcQFRqXPg&oh=00_AfEzpuEEenuqY15a96QQI7VEQO7K-ci9B8SUCwq3u8NVqA&oe=6840189B');
+            background-size: cover;
+            background-position: center;
+        }
+        .animated-text {
+            animation: slideIn 1.5s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/Galeria de Turismo/Calunamba.png" alt="Logotipo Oficial de Tômbua" width="340">
+                <span class="logo-text">Tombwa o Destino</span>
+            </div>
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+               <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre Nós</a></li>
+                    <li><a href="atracoes.html"><i class="fas fa-map-marked-alt"></i> Atrações</a></li>
+                    <li><a href="galeria.html"><i class="fas fa-images"></i> Galeria</a></li>
+                    <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                    <li><a href="planeje.html"><i class="fas fa-route"></i> Planeje Sua Visita</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animated-text">Descubra as Maravilhas do Tombwa</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animated-text">Explore as paisagens deslumbrantes, praias paradisíacas e cultura vibrante desta joia angolana.</p>
+            <a href="#atracoes" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block animated-text">
+                Explorar Atrações <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Atrações Section -->
+        <section id="atracoes" class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Principais Atrações</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Conheça os lugares mais incríveis que Tombwa tem para oferecer aos seus visitantes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Atração 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-item">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="assets/Galeria de Turismo/Capela-1.jpg" 
+                             alt="Capela dos Navegantes" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                            <h3 class="text-white text-2xl font-bold">Capela do Navegante</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Obra de arquitectura religiosa da Igreja Católica, mandada construir por Frank Marques
+                            . Está precisamente localizada a Norte da sede municípal, num vasto espaço
+                            sem cobertura vegetal nem ocupação por outras estruturas humanas. A capela carece de
+                            reabilitação, pois se encontra praticamente abandonada em estado de degradação..</p>
+                        <p class="font-semibold text-blue-900"><i class="fas fa-star text-yellow-500 mr-2"></i>Pôr do sol espetacular .</p>
+                    </div>
+                </div>
+
+                <!-- Atração 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-item">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="assets/Galeria de Turismo/Welwitschia-Slider.jpg" 
+
+                             alt="Mercado do Peixe" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                            <h3 class="text-white text-2xl font-bold">Welwitschia Mirabilis</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Esta planta gigante, com pouco mais de 1.5 metros de altura e mais de 4 metros de diâmetro, está localizada na Reserva Parcial do Namibe. Planta endémica do género monotípico de plantas verdes gimnospérmicas cuja única espécie designada de Welwitschia mirabilis, popularmente conhecida como "polvo do deserto", que só existe no deserto do Namibe em Angola.</p>
+                        <p class="font-semibold text-blue-900"><i class="fas fa-star text-yellow-500 mr-2"></i>Uma obra-prima da evolução, e se encante com a força da vida no coração do deserto.</p>
+                    </div>
+                </div>
+
+                <!-- Atração 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-item">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="assets/Galeria de Turismo/Pescador-3.jpg" 
+                             alt="Estatua do Pescador" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                            <h3 class="text-white text-2xl font-bold">Estátua do Pescador</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">O nome “Estátua do Pescador” está relacionado com a importância do sector pesqueiro no municipio. O lugar foi fundado em 6 de Dezembro de 1971 e ocupa uma ampla área privilegiada na vila do Tômbwa.O local tem um estado de conservação aceitável, pelo que, nos finais de semana é frequentado pela juventude. Porém, em função da sua importancia carece de obras da reabilitação e requalificação do pavimento, do jardím e da estátua que representa um pescador com feições de europeu portugués, simbolizando os primeiros colonos a chegar na vila.</p>
+                        <p class="font-semibold text-blue-900"><i class="fas fa-star text-yellow-500 mr-2"></i>Venha conhecer o símbolo maior da coragem e tradição marítima.</p>
+                    </div>
+                </div>
+               <!-- Atração 4 -->
+               <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-item">
+                <div class="relative overflow-hidden h-64">
+                    <img src="assets/Galeria de Turismo/logo-tombwa.JPG" 
+                         alt="Paroquia Nossa Senhora de Rosario" 
+                         class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                        <h3 class="text-white text-2xl font-bold">Paróquia Nossa Senhora de Rosário</h3>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">A paróquia da Nossa Senhora do Rosário se destaca na zona, por ser uma obra de arquitectura com rasgos singulares, típicamente colonial de carácter religioso. A igreja do Rosário, nome dedicado ao mês da Nossa Senhora do Rosário, foi fundada em Agosto de 1891 pelo padre Joaqum Martins Tavares.</p>
+                    <p class="font-semibold text-blue-900"><i class="fas fa-star text-yellow-500 mr-2"></i>Venha se encantar com a fé que move o povo.</p>
+                </div>
+            </div>
+            <!-- Atração 5 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-item">
+                <div class="relative overflow-hidden h-64">
+                    <img src="assets/Galeria de Turismo/Praia-do-brasil.jpg" 
+                         alt="Praia do Brasil" 
+                         class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                        <h3 class="text-white text-2xl font-bold">Praia do Brasil</h3>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">É antecedido com um plató relativamente alto (>10) que lhe proporciona uma vista espetacular, a sua extensão em comprimento, a largura o acesso fácil e outras caracteristicas podem servir como factores de atração para quem gosta de fazer turismo de sol e praia, pelo que, é um local favorável para os investimentos de apoio como o caso de campismo juvenil..</p>
+                    <p class="font-semibold text-blue-900"><i class="fas fa-star text-yellow-500 mr-2"></i>Venha apreciar um por do sol incrivel.</p>
+                </div>
+            </div>
+            <!-- Atração 6 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-item">
+                <div class="relative overflow-hidden h-64">
+                    <img src="assets/Galeria de Turismo/surfista.jpg" 
+                         alt="Praia das Casuarinas" 
+                         class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                        <h3 class="text-white text-2xl font-bold">Praia das Casuarinas</h3>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Apresenta-se a caracterização pela sua vista parcial. na qual se pode aferir que esta é a praia mais próxima da vila do Tômbwa, pelo que, aos finais de semana é muito frequentada pelos banhistas locais e outros visitantes que procuram o Tômbwa como um destino turístico ou para o desenvolvimto da actividade comercial e outras actividades afins.</p>
+                    <p class="font-semibold text-blue-900"><i class="fas fa-star text-yellow-500 mr-2"></i>O local tem algumas infra-estruturas que podem servir de apoio aos banhistas e outros visitantes.</p>
+                </div>
+            </div>             
+            </div>
+            
+        </section>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <img src="assets/Galeria de Turismo/Calunamba.png" alt="Logotipo Tômbua" width="50">
+                    </div>
+                    <span class="logo-text">Tombwa o Destino <span>
+                    <p class="text-blue-200">Descubra as belezas e encantos desta cidade costeira angolana.</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-white hover:text-yellow-300 text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white hover:text-yellow-300 text-xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-yellow-300">Início</a></li>
+                        <li><a href="#atracoes" class="text-blue-200 hover:text-yellow-300">Atrações</a></li>
+                        <li><a href="#galeria" class="text-blue-200 hover:text-yellow-300">Galeria</a></li>
+                        <li><a href="#contacto" class="text-blue-200 hover:text-yellow-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-2 text-blue-200">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>Av. Simione Mukune, Tombwa, Namibe, Angola</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+244 976 275 905</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>info@tombwaturismo.ao</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-blue-200 mb-4">Inscreva-se para receber novidades sobre Tombwa.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-800">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
+                <p>&copy; 2025 Tombwa o Destino. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <!-- Gallery Lightbox -->
+    <div id="galleryLightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+        <div class="relative w-full max-w-6xl">
+            <button onclick="closeGallery()" class="absolute -top-16 right-0 text-white text-4xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="relative h-[70vh]">
+                <img id="lightboxImage" src="" alt="" class="w-full h-full object-contain">
+            </div>
+            <div class="flex justify-between mt-4">
+                <button onclick="prevImage()" class="text-white text-2xl px-4 py-2">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="text-white text-center">
+                    <span id="imageCounter">1/8</span>
+                </div>
+                <button onclick="nextImage()" class="text-white text-2xl px-4 py-2">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        let currentImageIndex = 0;
+
+        function openGallery(index) {
+            currentImageIndex = index;
+            document.getElementById('lightboxImage').src = galleryImages[currentImageIndex];
+            document.getElementById('imageCounter').textContent = `${currentImageIndex + 1}/${galleryImages.length}`;
+            document.getElementById('galleryLightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryLightbox').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            document.getElementById('lightboxImage').src = galleryImages[currentImageIndex];
+            document.getElementById('imageCounter').textContent = `${currentImageIndex + 1}/${galleryImages.length}`;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            document.getElementById('lightboxImage').src = galleryImages[currentImageIndex];
+            document.getElementById('imageCounter').textContent = `${currentImageIndex + 1}/${galleryImages.length}`;
+        }
+
+        // Menu mobile toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        menuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('active');
+        });
+    </script>
+</body>
+</htm>
